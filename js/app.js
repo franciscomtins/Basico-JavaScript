@@ -17,7 +17,7 @@ document.getElementById('user-name').innerHTML = userName
 // console.log(typeof idade)
 // console.log(typeof jedi)
 
-
+/////////////////////////////
 // Operadores matemáticos //
 
 // var n1 = 5
@@ -26,7 +26,7 @@ document.getElementById('user-name').innerHTML = userName
 // var total = n1 + parseInt(n2)
 // console.log(total)
 
-
+//////////////////////////////
 // Operadores de comparação //
 //  == Ignora a tipagem
 // === Valida a tipagem
@@ -38,6 +38,7 @@ document.getElementById('user-name').innerHTML = userName
 // console.log(resultado)
 
 
+////////////////////////////
 // Funções //
 
 // function soma(n1,n2) {
@@ -56,27 +57,29 @@ document.getElementById('user-name').innerHTML = userName
 // var resultado = soma(5,5)
 // console.log(resultado)
 
-// Controle de Fluxos //
+
+////////////////////////////
+// BDD e Controle de Fluxos //
 
 // sendo um cliente correntista do banco 
 // posso sacar dinheiro em caixas eletrônicos 
 // para poder comprar em lugares que não aceitam o cartão de débito ou crédito
 
-var saldo = 1000
+// var saldo = 1000
 
-function saque (valor) {
-    if (valor > saldo){
-        console.log('Valor do saque superior ao saldo')
-    } else if (valor > 700) {
-        console.log('Valor do saque é superior ao limite por operação')
-    } else{
-        saldo = saldo - valor
-    }
+// function saque (valor) {
+//     if (valor > saldo){
+//         console.log('Valor do saque superior ao saldo')
+//     } else if (valor > 700) {
+//         console.log('Valor do saque é superior ao limite por operação')
+//     } else{
+//         saldo = saldo - valor
+//     }
 
-}
+// }
 
-saque (701)
-console.log(saldo)
+// saque (701)
+// console.log(saldo)
 
 // Cenario 1: Saque com sucesso
 // Dado que meu saldo é de 1000 reais
@@ -95,3 +98,24 @@ console.log(saldo)
 // Quando faço um saque de 701 reais 
 // Então não deve deduzir do meu saldo
 // E deve mostrar uma mensagem de alerta informando que o valor é superior que o máximo permitido por operação
+
+
+////////////////////////////
+// Arrays //
+
+// var gaveteiro = ['Meias', 'Gravatas', 'Documentos', 'Salgadinhos']
+// console.log(gaveteiro[3])
+
+var personagens = ['Mestre Yoda', 'Luke Skywalter', 'Princesa Leia', 'Darth Vader']
+personagens.push('C3p0')
+personagens.pop()
+
+personagens = personagens.filter(function(p){
+    return p !== 'Darth Vader'
+})
+
+personagens = personagens.filter(function(p){
+    return p === 'Mestre Yoda'
+})
+
+console.log(personagens)
